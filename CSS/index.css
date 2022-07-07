@@ -1,0 +1,8 @@
+#carou2{
+display: flex;
+
+}
+.texte{
+    display: block;
+    align-items: center;
+}
