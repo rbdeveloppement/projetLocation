@@ -11,10 +11,13 @@ display: flex;
     display: flex;
     flex-direction: row-reverse;
 }
-.button{
+#button{
     display: flex;
     flex-direction: row-reverse;
 }
 .container{
     margin-top: 20px;
+}
+#logos{
+    margin-top: 15px;
 }
