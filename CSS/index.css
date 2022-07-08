@@ -1,0 +1,20 @@
+#carou2{
+display: flex;
+}
+.texte{
+    display: block;
+    align-items: center;
+    width: 50%;
+    margin-left: 40px;
+}
+#logo{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.button{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.container{
+    margin-top: 20px;
+}
