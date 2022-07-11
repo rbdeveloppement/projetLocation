@@ -10,6 +10,7 @@
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js"></script>
     
 </head>
 
@@ -36,24 +37,16 @@
 
             <div class="col-sm-12 col-lg-4 mb-3">
                 <label for="" class="form-label">Choisissez votre date d'arrivée:</label>
-                <input type="date" class="form-control" name="dateArriveeV1" id="dateArriveeV1" aria-describedby="helpId" placeholder="" required>
+                <input type="text" class="form-control" name="dateArriveeV1" id="dateArriveeV1" aria-describedby="helpId" placeholder="">
             </div>
 
             <div class="col-sm-12 col-lg-4 mb-3 d-none">
                 <label for="" class="form-label">Choisissez votre date d'arrivée:</label>
-                <input type="date" class="form-control" name="dateArriveeV2" id="dateArriveeV2" aria-describedby="helpId" placeholder="">
+                <input type="text" class="form-control" name="dateArriveeV2" id="dateArriveeV2" aria-describedby="helpId" placeholder="">
             </div>
 
 
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Choississez la durée de votre séjour en semaine(s):</label>
-                <select class="form-control" name="dureeSejour" id="dureeSejour" required>
-                    <option value="1">1 semaine</option>
-                    <option value="2">2 semaines</option>
-                    <option value="3">3 semaines</option>
-                    <option value="4">4 semaines</option>
-                </select>
-            </div>
+
 
             <div class="col-sm-12 col-lg-3 mb-3">
                 <label for="" class="form-label">Nom:</label>
@@ -186,7 +179,7 @@
 
 
 
-
+    
     <script src="js/resa.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
