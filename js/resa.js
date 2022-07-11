@@ -1,12 +1,6 @@
 let HTMLinputfields = document.querySelectorAll("input");
 let HTMLselects = document.querySelectorAll("select");
-for (const input of HTMLinputfields) {
-    input.setAttribute("required", true);
-}
 
-for (const select of HTMLselects) {
-    select.setAttribute("required", true);
-}
 
 
 let dateDebutResas = new Date(2022, 06, 17).toISOString().slice(0,10);
@@ -35,5 +29,13 @@ let villa2 = {
 
 let dureeResa = document.querySelector("#dureeSejour").value;
 let choixVilla = document.querySelector("#choixVilla").value;
+
+let formulaire = document.querySelector("#form");
+formulaire.onsubmit = function()  {
+    alert("formulaire valide");
+    window.open("validation.html");
+};
+
+
 
 let bp = true;
