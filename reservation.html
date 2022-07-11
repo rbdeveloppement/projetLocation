@@ -111,14 +111,14 @@
 
 
             <!--afficher différents champs selon le modèle de carte-->
-            <div class="col-sm-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-lg-6 mb-3" hidden>
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="" id="numeroCarteVisa" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
                     <div class="msg_CB"></div> 
             </div>
 
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
+            <div class="col-sm-12 col-lg-6 mb-3">
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="" id="numeroCB" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
@@ -176,7 +176,7 @@
                     carte de paiement</small>
             </div>
         <div class="col-sm-6 col-lg-3 offset-lg-3 mb-2 d-flex align-items-center align-self-center">
-            <button type="submit" class="btn btn-primary ms-lg-auto">Valider la réservation</button>
+            <button onclick="myFunction()" type="submit" class="btn btn-primary ms-lg-auto">Valider la réservation</button>
         </div>
         </div>
     </div>

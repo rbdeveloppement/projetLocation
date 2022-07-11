@@ -6,13 +6,7 @@ document.querySelector(".btn").onclick = (evt) => {
   if (regexCP.test(codePostal) == false) {
     document.querySelector(".msg_Cp").innerText = "code postal invalide";
   }
-  // verification carte bancaire
-  let carteBancaire = document.querySelector("#carteBancaire").value;
-  let regexCB =
-    /(^5[1-5]|^4|^3[47])|(^6011|65|64[4-9]|622(1(2[6-9]|[3-9]\d)|[2-8]\d{2}|9([01]\d|2[0-5])))\d+/;
-  if (regexCB.test(carteBancaire) == false) {
-    document.querySelector(".msg_CB").innerText = "carte bancaire invalide";
-  }
+  
   // vérification téléphone
   let telephone = document.querySelector("#tel").value;
   let regextel =
@@ -27,5 +21,18 @@ document.querySelector(".btn").onclick = (evt) => {
     /^[-!#-'*+\/-9=?^-~]+(?:\.[-!#-'*+\/-9=?^-~]+)*@[-!#-'*+\/-9=?^-~]+(?:\.[-!#-'*+\/-9=?^-~]+)+$/i;
   if (regexmail.test(adresseMail) == false) {
     document.querySelector(".msg_mail").innerText = "adresse e-mail invalide";
+  }
+
+
+
+
+
+
+// verification carte bancaire
+  let carteBancaire = document.querySelector("#numeroCB").value;
+  let regexCB =
+  /(^5[1-5]|^4|^3[47])|(^6011|65|64[4-9]|622(1(2[6-9]|[3-9]\d)|[2-8]\d{2}|9([01]\d|2[0-5])))\d+/
+    if (regexCB.test(carteBancaire) == false) {
+    document.querySelector(".msg_CB").innerText = "carte bancaire invalide";
   }
 };
