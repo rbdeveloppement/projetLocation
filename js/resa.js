@@ -70,6 +70,23 @@ let listeSamedisV1 = [
 ];
 let listeSamedisV2 = listeSamedisV1;
 
+let changeMin = function(MinDate){
+    let ajd = new Date();
+    let firstDateAvailable = ajd;
+    if (firstDateAvailable.getTime() - MinDate.getTime() >= 0) {
+    let ajdJour = firstDateAvailable.getDay();
+    if (ajdJour === 6) {
+        MinDate = new Date(firstDateAvailable.getTime() + 7 * msPerDay);
+    }
+    else {
+        MinDate = new Date((firstDateAvailable.getTime() + (7 - ajdJour)) * msPerDay);
+    }
+}
+}
+
+changeMin(datMinV1);
+changeMin(datMinV2);
+
 
 //calendriers = modifier les variables associées aux clés AVANT l'exécution de ce code!
 const pickerVilla1 = new easepick.create({
