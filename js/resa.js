@@ -20,30 +20,33 @@ let selectionCarte = document.querySelector("#carteBancaire");
 selectionCarte.onchange = function() {
 let modeleDeCarte = document.querySelector("#carteBancaire").value;
 switch (modeleDeCarte) {
-    case "1":
+    case "1": // Carte Bleue
         visaInputField.remove();
         MCInputField.remove();
         AmExpInputField.remove();
         lignePrincipale.insertBefore(CBInputField, document.querySelector("#ExpirationDate"));
-        
+        document.querySelector("#numeroCB").required = true;
         break;
-    case "2":
+    case "2": // Visa
         CBInputField.remove();
         MCInputField.remove();
         AmExpInputField.remove();
         lignePrincipale.insertBefore(visaInputField, document.querySelector("#ExpirationDate"));
+        document.querySelector("#numeroCarteVisa").required = true;
         break;
-    case "3":
+    case "3": //Master Card
         CBInputField.remove();
         visaInputField.remove();
         AmExpInputField.remove();
         lignePrincipale.insertBefore(MCInputField, document.querySelector("#ExpirationDate"));
+        document.querySelector("#numeroMasterCard").required = true;
         break;
-    case "4":
+    case "4":  //American Express
         CBInputField.remove();
         MCInputField.remove();
         visaInputField.remove();
         lignePrincipale.insertBefore(AmExpInputField ,document.querySelector("#ExpirationDate"));
+        document.querySelector("#numeroAmericanExpress").required = true;
         break;
     default:
         break;
