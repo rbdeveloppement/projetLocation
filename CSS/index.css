@@ -1,0 +1,25 @@
+img.alignLeft{
+    float: left;
+    width: 35%;
+    height: 35%;
+    margin: 0 15px 0 0;
+}
+
+img.alignRight{
+    float: right;
+    width: 35%;
+    height: 35%;
+    margin: 0 0 0 15px;
+}
+
+p.alignLeft{
+    text-align: left;
+}
+
+p.alignRight{
+    text-align: right;
+}
+
+.clear{
+    clear: both;
+}
