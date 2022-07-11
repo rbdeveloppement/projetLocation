@@ -10,13 +10,18 @@ for (const select of HTMLselects) {
 
 
 let dateDebutResas = new Date(2022, 06, 17).toISOString().slice(0,10);
+//mettre if statement pour calculer nouvelle date de début universelle en fonction de la date actuelle si date après 16 juillet
 let dateFinResas = new Date(2022, 08, 3).toISOString().slice(0,10);
 
-let calendrier = document.querySelector("#dateArrivee");
-calendrier.max = dateFinResas; 
-calendrier.min = dateDebutResas;
-calendrier.step = 7;
+let calendrierV1 = document.querySelector("#dateArriveeV1");
+calendrierV1.max = dateFinResas; 
+calendrierV1.min = dateDebutResas;
+calendrierV1.step = 7;
 
+let calendrierV2 = document.querySelector("#dateArriveeV2");
+calendrierV1.max = dateFinResas; 
+calendrierV1.min = dateDebutResas;
+calendrierV1.step = 7;
 
 
 let villa1 = {
