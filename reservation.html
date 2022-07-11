@@ -24,7 +24,7 @@
 
     <form id="form">
     <div class="container">
-        <div class="row">
+        <div class="row" id="lignePrincipale">
 
             <div class="col-sm-12 col-lg-4 mb-3">
                 <label for="" class="form-label">Choisissez votre location:</label>
@@ -97,15 +97,15 @@
 
             <div class="col-sm-12 col-lg-3 mb-3">
                 <label for="" class="form-label">Modèle de carte:</label>
-                <select class="form-control" name="CBModele" id="" required>
-                    <option>CB</option>
-                    <option>Visa</option>
-                    <option>MasterCard</option>
-                    <option>American Express</option>
+                <select class="form-control" name="CBModele" id="carteBancaire" required>
+                    <option value = 1 >CB</option>
+                    <option value = 2>Visa</option>
+                    <option value = 3>MasterCard</option>
+                    <option value = 4>American Express</option>
                 </select>
             </div>
 
-            <div class="col-sm-12 col-lg-7 mb-3">
+            <div class="col-sm-12 col-lg-7 mb-3" id="CardOwnerInputField">
                 <label for="" class="form-label">Titulaire de la carte:</label>
                 <input type="text" class="form-control" name="CBtitulaire" id="" aria-describedby="helpId"
                     placeholder="Mr Jean-Michel Blanquette">
@@ -113,31 +113,31 @@
 
 
             <!--afficher différents champs selon le modèle de carte-->
-            <div class="col-sm-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-lg-6 mb-3" id="CBInputfield">
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="NumCB" id="numeroCB" aria-describedby="helpId"
-                    placeholder="XXXX XXXX XXXX XXXX" required>
+                    placeholder="XXXX XXXX XXXX XXXX">
             </div>
            
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
+            <div class="col-sm-12 col-lg-6 mb-3" id="visaInputField">
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="NumVisa" id="numeroCarteVisa" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
             </div>
 
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
+            <div class="col-sm-12 col-lg-6 mb-3" id="MCInputField" >
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="NumMC" id="numeroMasterCard" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
             </div>
 
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
+            <div class="col-sm-12 col-lg-6 mb-3" id="AmExpInputField">
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="NumAmExp" id="numeroAmericanExpress" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
             </div>
 
-            <div class="col-sm-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-lg-6 mb-3" id="ExpirationDate">
                 <div class="d-flex flex-column">
                     <label for="" class="form-label">Date d'expiration:</label>
                     <div class="d-flex flex-row">
