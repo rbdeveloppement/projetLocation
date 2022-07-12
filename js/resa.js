@@ -49,7 +49,7 @@ formulaire.onsubmit = function () {
     localStorage.setItem(`nom${numeroReservation}`, nom);
     let prenom =  document.querySelector("#prenom").value;
     localStorage.setItem(`prenom${numeroReservation}`, prenom);
-    let telephone = document.querySelector("#telephone").value;
+    let telephone = document.querySelector("#tel").value;
     localStorage.setItem(`telephone${numeroReservation}`, telephone);
     let maisonChoisie = document.querySelector("#choixVilla").value;
     localStorage.setItem(`maisonChoisie${numeroReservation}`, maisonChoisie);

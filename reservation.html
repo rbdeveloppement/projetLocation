@@ -6,7 +6,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="CSS/resa.css".css">
+    <link rel="stylesheet" href="./CSS/resa.css">
     <!-- Bootstrap CSS v5.2.0-beta1 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
         integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
@@ -53,22 +53,34 @@
 
             <div class="col-sm-12 col-lg-7 mb-3">
                 <label for="" class="form-label">Adresse E-Mail:</label>
-                <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="" required>
+
+                <input type="email" class="form-control" name="Email" id="mail" aria-describedby="emailHelpId" placeholder="" required>
+               
+
             </div>
 
             <div class="col-sm-12 col-lg-4 mb-3">
                 <label for="" class="form-label">Numéro de téléphone:</label>
-                <input type="text" class="form-control" name="Telephone" id="telephone" aria-describedby="helpId" placeholder="" required>
+
+                <input type="text" class="form-control" name="Telephone" id="tel" aria-describedby="helpId" placeholder="" required>
+                <div class="msg_tel"></div>           
+
             </div>
 
             <div class="col-sm-12 col-lg-10 mb-3">
                 <label for="" class="form-label">Adresse:</label>
                 <input type="text" class="form-control" name="Adresse" id="" aria-describedby="helpId" placeholder="" required>
+
+                <div class="msg_mail"></div>
+
             </div>
 
             <div class="col-sm-12 col-lg-4 mb-3">
                 <label for="" class="form-label">Code postal:</label>
-                <input type="text" class="form-control" name="CP" id="" aria-describedby="helpId" placeholder="" required>
+
+                <input type="text" class="form-control" name="CP" id="codePostale" aria-describedby="helpId" placeholder="" required>
+                <div class="msg_Cp"></div>
+
             </div>
 
             <div class="col-sm-12 col-lg-4 mb-3">
@@ -103,7 +115,12 @@
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="NumCB" id="numeroCB" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX" disabled>
+
+                    <div class="msg_CB"></div>
+                </div>
+
             </div>
+
            
 
             <div class="col-sm-12 col-lg-6 mb-3" id="ExpirationDate">
@@ -155,7 +172,11 @@
 
 
 
+
+    <script src="js/validation_cb_et_cp.js"></script>
+
     
+
     <script src="js/resa.js"></script>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
