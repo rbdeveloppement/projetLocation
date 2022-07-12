@@ -1,6 +1,6 @@
 #moisExpCarte{
     min-width:max-content !important; 
 }
-.msg_mail, .msg_tel, .msg_CB, .msg_Cp{
+.msg_mail, .msg_tel, .msg_CB, .msg_Cp, .msg_dateCB{
     color: red;
 }
