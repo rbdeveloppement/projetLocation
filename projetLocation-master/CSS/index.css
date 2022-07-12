@@ -21,3 +21,7 @@ display: flex;
 #logos{
     margin-top: 15px;
 }
+
+.navbar{
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
