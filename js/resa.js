@@ -1,6 +1,28 @@
 let HTMLinputfields = document.querySelectorAll("input");
 let HTMLselects = document.querySelectorAll("select");
 
+//Récupération des données de la session précédente
+
+//1.Récupérer numéro de la réservation
+let numeroReservationJSON = localStorage.getItem("numeroReservation");
+let numeroReservation = JSON.parse(numeroReservationJSON);
+if (numeroReservation == null){
+    numeroReservation = 0;
+}
+
+//2.récupérer l'ensemble des informations enregistrées dans localStorage
+let localStorageData = [];
+for (let index = 0; index < localStorage.length; index++) {
+    localStorageData.push(Object.entries(localStorage)); 
+}
+//Parse les clés et valeurs pour convertir en JS strings
+for (let i = 0; index < localStorageData.length; i++) {
+    const element = localStorageData[i];
+    for (let j = 0; index < element.length; j++) {
+        const item = JSON.parse(element[j]);
+    }
+}
+
 
 //Active le champ CB lorsqu'une valeur de carte est choisie:
 let CBfield = document.getElementById("numeroCB");
@@ -16,13 +38,26 @@ choixModele.onchange = function(){
    
     
 };
-
 //Evènement lorsque formulaire valide
-
 let formulaire = document.querySelector("#form");
 formulaire.onsubmit = function () {
+
     alert("formulaire valide");
     window.open("validation.html");
+    //Sauvegarde des données
+    let nom = document.querySelector("#nom").value;
+    localStorage.setItem(`nom${numeroReservation}`, nom);
+    let prenom =  document.querySelector("#prenom").value;
+    localStorage.setItem(`prenom${numeroReservation}`, prenom);
+    let telephone = document.querySelector("#telephone").value;
+    localStorage.setItem(`telephone${numeroReservation}`, telephone);
+    let maisonChoisie = document.querySelector("#choixVilla").value;
+    localStorage.setItem(`maisonChoisie${numeroReservation}`, maisonChoisie);
+    let datesDeResas = document.querySelector("#dateArrivee").value;
+    localStorage.setItem(`datesDeResas${numeroReservation}`, datesDeResas);
+    numeroReservation++;
+    localStorage.setItem("numeroReservation", JSON.stringify(numeroReservation));
+
 };
 
 //Calendriers, dates, etc
@@ -54,7 +89,7 @@ changeMin(datMinV2);
 
 
 //calendriers = modifier les variables associées aux clés AVANT l'exécution de ce code!
-const pickerVilla1 = new easepick.create({
+const pickerVilla = new easepick.create({
     element: document.getElementById('dateArriveeV1'),
     css: [
         'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css',
@@ -67,18 +102,8 @@ const pickerVilla1 = new easepick.create({
     RangePlugin: {delimiter: " au ",}
 });
 
-const pickerVilla2 = new easepick.create({
-    element: document.getElementById('dateArriveeV2'),
-    css: [
-        'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css',
-    ],
-    lang: 'fr-FR',
-    format: 'DD-MM-YYYY',
-    plugins: ['LockPlugin', 'RangePlugin'],
-    LockPlugin: { minDate: datMinV2, maxDate: datMaxV2, inseparable: false, minDays: 8, maxDays: 29,
-    filter(date, picked){return !listeSamedisV1.includes(date.format('DD-MM-YYYY'));} },
-    RangePlugin: {delimiter: " au ",}
-});
+
+
 
 
 
