@@ -1,56 +1,21 @@
 let HTMLinputfields = document.querySelectorAll("input");
 let HTMLselects = document.querySelectorAll("select");
 
-//Paramétrer l'affichage des champs HTML selon le type de carte choisi
-let lignePrincipale = document.querySelector("#lignePrincipale");
-let CBInputField = document.querySelector("#CBInputfield");;
-let visaInputField = document.querySelector("#visaInputField");
-let MCInputField = document.querySelector("#MCInputField");
-let AmExpInputField = document.querySelector("#AmExpInputField");
 
-visaInputField.remove();
-MCInputField.remove();
-AmExpInputField.remove();
+//Active le champ CB lorsqu'une valeur de carte est choisie:
+let CBfield = document.getElementById("numeroCB");
+let choixModele = document.getElementById("carteBancaire")
 
-
-
-let selectionCarte = document.querySelector("#carteBancaire");
-
-
-selectionCarte.onchange = function() {
-let modeleDeCarte = document.querySelector("#carteBancaire").value;
-switch (modeleDeCarte) {
-    case "1": // Carte Bleue
-        visaInputField.remove();
-        MCInputField.remove();
-        AmExpInputField.remove();
-        lignePrincipale.insertBefore(CBInputField, document.querySelector("#ExpirationDate"));
-        document.querySelector("#numeroCB").required = true;
-        break;
-    case "2": // Visa
-        CBInputField.remove();
-        MCInputField.remove();
-        AmExpInputField.remove();
-        lignePrincipale.insertBefore(visaInputField, document.querySelector("#ExpirationDate"));
-        document.querySelector("#numeroCarteVisa").required = true;
-        break;
-    case "3": //Master Card
-        CBInputField.remove();
-        visaInputField.remove();
-        AmExpInputField.remove();
-        lignePrincipale.insertBefore(MCInputField, document.querySelector("#ExpirationDate"));
-        document.querySelector("#numeroMasterCard").required = true;
-        break;
-    case "4":  //American Express
-        CBInputField.remove();
-        MCInputField.remove();
-        visaInputField.remove();
-        lignePrincipale.insertBefore(AmExpInputField ,document.querySelector("#ExpirationDate"));
-        document.querySelector("#numeroAmericanExpress").required = true;
-        break;
-    default:
-        break;
-;}}
+choixModele.onchange = function(){
+    if (choixModele.value != "CB"){
+        CBfield.disabled = false;
+    }
+    else{
+        CBfield.disabled = true;
+    }
+   
+    
+};
 
 //Evènement lorsque formulaire valide
 
