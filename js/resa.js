@@ -20,10 +20,14 @@ choixModele.onchange = function(){
 //Evènement lorsque formulaire valide
 
 let formulaire = document.querySelector("#form");
-formulaire.onsubmit = function () {
+formulaire.onsubmit = function(e){
+    e.preventDefault();
+  if (telIsOk && cpIsOk && mailIsOk && visaIsOk && masterIsOk && AmExpisOk == true){
     alert("formulaire valide");
-    window.open("validation.html");
+    // window.open("validation.html");
+  }
 };
+
 
 //Calendriers, dates, etc
 
