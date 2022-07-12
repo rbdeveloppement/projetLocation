@@ -24,27 +24,23 @@ document.querySelector(".btn").onclick = (evt) => {
   }
 
   // verification carte bancaire
-  let carteBancaire = document.getElementById("#carteBancaire").value;{
+  let carteBancaire = document.getElementById("carteBancaire").value;
+  let numCB = document.getElementById("numeroCB").value;
   if (carteBancaire == "Visa") {
-    let NumVisa = document.querySelector("#numeroCarteVisa").value;
-    let regexVisa = /^4\d{12}(?:\d{3})?$/;
-    if (regexVisa.test(NumVisa) == false) {
+    let regexVisa = /^4\d{3}(| |-)(?:\d{4}\1){2}\d{4}$/;
+    if (regexVisa.test(numCB) == false) {
       document.querySelector(".msg_CB").innerText = "carte visa invalide";
     }
-  } 
-  else if (carteBancaire = "MasterCard") {
-    let NumMaster = document.querySelector("#numeroMastercart").value;
-    let regexMaster = /^5[1-5]\d{14}$/;
-    if (regexMaster.test(NumMaster) == false) {
+  } else if ((carteBancaire = "MasterCard")) {
+    let regexMaster = /^5[1-5]\d{2}(| |-)(?:\d{4}\1){2}\d{4}$/;
+    if (regexMaster.test(numCB) == false) {
       document.querySelector(".msg_CB").innerText = "carte mastercard invalide";
     }
-  } 
-  else if (carteBancaire = "AmExpress") {
-    let NumAmEx = document.querySelector("#numeroAmericanExpress").value;
-    let regexAE = /^3[47]\d{13,14}$/;
-    if (regexAE.test(NumAmEx) == false) {
+  } else if ((carteBancaire = "AmExpress")) {
+    let regexAE = /^3[47]\d{1,2}(| |-)\d{6}\1\d{6}$/;
+    if (regexAE.test(numCB) == false) {
       document.querySelector(".msg_CB").innerText =
         "carte american express invalide";
     }
-  }}
+  }
 };
