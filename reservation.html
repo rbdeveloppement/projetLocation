@@ -96,10 +96,10 @@
             <div class="col-sm-12 col-lg-3 mb-3">
                 <label for="" class="form-label">Modèle de carte:</label>
                 <select class="form-control" name="" id="carteBancaire">
-                    <option>CB</option>
-                    <option>Visa</option>
-                    <option>MasterCard</option>
-                    <option>American Express</option>
+                    <option value = "CB">CB</option>
+                    <option value ="Visa">Visa</option>
+                    <option value ="MasterCard">MasterCard</option>
+                    <option value ="AmExpress">American Express</option>
                 </select>
             </div>
 
@@ -111,14 +111,14 @@
 
 
             <!--afficher différents champs selon le modèle de carte-->
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
+            <div class="col-sm-12 col-lg-6 mb-3">
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="" id="numeroCarteVisa" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
                     <div class="msg_CB"></div> 
             </div>
 
-            <div class="col-sm-12 col-lg-6 mb-3">
+            <div class="col-sm-12 col-lg-6 mb-3" hidden>
                 <label for="" class="form-label">Numéro de carte:</label>
                 <input type="text" class="form-control" name="" id="numeroCB" aria-describedby="helpId"
                     placeholder="XXXX XXXX XXXX XXXX">
