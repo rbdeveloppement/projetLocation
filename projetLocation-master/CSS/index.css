@@ -15,6 +15,9 @@ display: flex;
     display: flex;
     flex-direction: row-reverse;
 }
+#link{
+    text-decoration: none;
+}
 .container{
     margin-top: 20px;
 }
