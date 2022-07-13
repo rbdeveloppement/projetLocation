@@ -92,7 +92,7 @@ choixModele.onchange = function () {
     }
     else {
         CBfield.disabled = true;
-    }
+    }}
 
 
 
