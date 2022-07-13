@@ -1,25 +1,30 @@
-img.alignLeft{
-    float: left;
-    width: 35%;
-    height: 35%;
-    margin: 0 15px 0 0;
+#carou2{
+display: flex;
+}
+.texte{
+    display: block;
+    align-items: center;
+    width: 50%;
+    margin-left: 40px;
+}
+#logo{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#button{
+    display: flex;
+    flex-direction: row-reverse;
+}
+#link{
+    text-decoration: none;
+}
+.container{
+    margin-top: 20px;
+}
+#logos{
+    margin-top: 15px;
 }
 
-img.alignRight{
-    float: right;
-    width: 35%;
-    height: 35%;
-    margin: 0 0 0 15px;
-}
-
-p.alignLeft{
-    text-align: left;
-}
-
-p.alignRight{
-    text-align: right;
-}
-
-.clear{
-    clear: both;
+.navbar{
+    background-color:rgba(0, 0, 0, 0.2) ;
 }
