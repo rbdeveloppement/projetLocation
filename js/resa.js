@@ -1,7 +1,6 @@
+
 const DateTime = easepick.DateTime;
 
-let HTMLinputfields = document.querySelectorAll("input");
-let HTMLselects = document.querySelectorAll("select");
 
 //Récupération des données de la session précédente
 
@@ -92,7 +91,7 @@ choixModele.onchange = function () {
     }
     else {
         CBfield.disabled = true;
-    }
+    }}
 
 
 
@@ -154,7 +153,3 @@ function Validationformulaire(){
     let bp = true;
 
 };
-
-
-
-
