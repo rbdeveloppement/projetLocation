@@ -15,9 +15,21 @@ display: flex;
     display: flex;
     flex-direction: row-reverse;
 }
+
+#link{
+    text-decoration: none;
+}
+
+
 .container{
     margin-top: 20px;
 }
 #logos{
     margin-top: 15px;
+
+}
+
+.navbar{
+    background-color:rgba(0, 0, 0, 0.2) ;
+
 }
