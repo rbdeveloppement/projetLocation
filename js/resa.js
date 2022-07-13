@@ -126,15 +126,6 @@ const pickerVilla = new easepick.create({
     RangePlugin: { delimiter: " au ", }
 });
 
-//a insérer dans LockPlugin
-// filter(date, picked){return !listeSamedisV1.includes(date.format('DD-MM-YYYY'));} 
-
-
-
-//Evènement lorsque formulaire valide
-// let formulaire = document.querySelector("#form");
-// formulaire.onsubmit = (event) => {
-//     event.preventDefault();}
 
 function Validationformulaire(){
     alert("formulaire valide");
