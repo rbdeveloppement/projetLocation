@@ -32,113 +32,113 @@
 </header>
 
     <form id="form">
-    <div class="container">
-        <div class="row">
+        <div class="container">
+            <div class="row" id="lignePrincipale">
 
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Choisissez votre location:</label>
-                <select class="form-control" name="choixVilla" id="choixVilla" required>
-                    <option value="1">Villa 1</option>
-                    <option value="2">Villa 2</option>
-                </select>
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Choisissez votre location:</label>
+                    <select class="form-control" name="choixVilla" id="choixVilla" required>
+                        <option value="1">Villa 1</option>
+                        <option value="2">Villa 2</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Choisissez votre date d'arrivée:</label>
+                    <input type="text" class="form-control" name="dateArrivee" id="dateArrivee"
+                        aria-describedby="helpId" placeholder="">
+                </div>
+
+
+                <div class="col-sm-12 col-lg-3 mb-3">
+                    <label for="" class="form-label">Nom:</label>
+                    <input type="text" class="form-control" name="Nom" id="nom" aria-describedby="helpId" placeholder=""
+                        required>
+                </div>
+
+                <div class="col-sm-12 col-lg-3 mb-3">
+                    <label for="" class="form-label">Prénom:</label>
+                    <input type="text" class="form-control" name="Prenom" id="prenom" aria-describedby="helpId"
+                        placeholder="" required>
+                </div>
+
+                <div class="col-sm-12 col-lg-7 mb-3">
+                    <label for="" class="form-label">Adresse E-Mail:</label>
+
+
+
+                <input type="email" class="form-control" name="Email" id="mail" aria-describedby="emailHelpId" placeholder="" required>
+                <div class="msg_mail"></div>
+
+
+                </div>
+
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Numéro de téléphone:</label>
+
+                    <input type="text" class="form-control" name="Telephone" id="tel" aria-describedby="helpId"
+                        placeholder="" required>
+                    <div class="msg_tel"></div>
+
+                </div>
+
+                <div class="col-sm-12 col-lg-10 mb-3">
+                    <label for="" class="form-label">Adresse:</label>
+                    <input type="text" class="form-control" name="Adresse" id="" aria-describedby="helpId"
+                        placeholder="" required>
+
+               </div>
+
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Code postal:</label>
+
+                    <input type="text" class="form-control" name="CP" id="codePostale" aria-describedby="helpId"
+                        placeholder="" required>
+                    <div class="msg_Cp"></div>
+
+                </div>
+
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Ville:</label>
+                    <input type="text" class="form-control" name="Ville" id="" aria-describedby="helpId" placeholder=""
+                        required>
+                </div>
+
+                <div class="col-sm-12 col-lg-4 mb-3">
+                    <label for="" class="form-label">Pays:</label>
+                    <input type="text" class="form-control" name="Pays" id="" aria-describedby="helpId" placeholder=""
+                        required>
+                </div>
+
+                <div class="col-sm-12 col-lg-3 mb-3">
+                    <label for="" class="form-label">Modèle de carte:</label>
+                    <select class="form-control" name="CBModele" id="carteBancaire" required>
+                        <option value="CB">Choisir un modèle...</option>
+                        <option value="Visa">Visa</option>
+                        <option value="MasterCard">MasterCard</option>
+                        <option value="AmExpress">American Express</option>
+                    </select>
+                </div>
+
+                <div class="col-sm-12 col-lg-7 mb-3" id="CardOwnerInputField">
+                    <label for="" class="form-label">Titulaire de la carte:</label>
+                    <input type="text" class="form-control" name="CBtitulaire" id="" aria-describedby="helpId"
+                        placeholder="Mr Jean-Michel Blanquette">
+                </div>
+
+
+                <!--afficher différents champs selon le modèle de carte-->
+                <div class="col-sm-12 col-lg-6 mb-3" id="CBInputfield">
+                    <label for="" class="form-label">Numéro de carte:</label>
+                    <input type="text" class="form-control" name="NumCB" id="numeroCB" aria-describedby="helpId"
+                        placeholder="XXXX XXXX XXXX XXXX" disabled>
+
+                    <div class="msg_CB"></div>
+                </div>
+
             </div>
 
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Choisissez votre date d'arrivée:</label>
-                <input type="date" class="form-control" name="dateArriveeV1" id="dateArriveeV1" aria-describedby="helpId" placeholder="" required>
-            </div>
 
-            <div class="col-sm-12 col-lg-4 mb-3 d-none">
-                <label for="" class="form-label">Choisissez votre date d'arrivée:</label>
-                <input type="date" class="form-control" name="dateArriveeV2" id="dateArriveeV2" aria-describedby="helpId" placeholder="">
-            </div>
-
-
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Choississez la durée de votre séjour en semaine(s):</label>
-                <select class="form-control" name="dureeSejour" id="dureeSejour" required>
-                    <option value="1">1 semaine</option>
-                    <option value="2">2 semaines</option>
-                    <option value="3">3 semaines</option>
-                    <option value="4">4 semaines</option>
-                </select>
-            </div>
-
-            <div class="col-sm-12 col-lg-3 mb-3">
-                <label for="" class="form-label">Nom:</label>
-                <input type="text" class="form-control" name="Nom" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-3 mb-3">
-                <label for="" class="form-label">Prénom:</label>
-                <input type="text" class="form-control" name="Prenom" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-7 mb-3">
-                <label for="" class="form-label">Adresse E-Mail:</label>
-                <input type="email" class="form-control" name="Email" id="" aria-describedby="emailHelpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Numéro de téléphone:</label>
-                <input type="text" class="form-control" name="Telephone" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-10 mb-3">
-                <label for="" class="form-label">Adresse:</label>
-                <input type="text" class="form-control" name="Adresse" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Code postal:</label>
-                <input type="text" class="form-control" name="CP" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Ville:</label>
-                <input type="text" class="form-control" name="Ville" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-4 mb-3">
-                <label for="" class="form-label">Pays:</label>
-                <input type="text" class="form-control" name="Pays" id="" aria-describedby="helpId" placeholder="" required>
-            </div>
-
-            <div class="col-sm-12 col-lg-3 mb-3">
-                <label for="" class="form-label">Modèle de carte:</label>
-                <select class="form-control" name="CBModele" id="" required>
-                    <option value="CB">Choisir un modèle...</option>
-                    <option value="Visa">Visa</option>
-                    <option value="MasterCard">MasterCard</option>
-                    <option value="AmExpress">American Express</option>
-                </select>
-            </div>
-
-            <div class="col-sm-12 col-lg-7 mb-3">
-                <label for="" class="form-label">Titulaire de la carte:</label>
-                <input type="text" class="form-control" name="CBtitulaire" id="" aria-describedby="helpId"
-                    placeholder="Mr Jean-Michel Blanquette">
-            </div>
-
-
-            <!--afficher différents champs selon le modèle de carte-->
-            <div class="col-sm-12 col-lg-6 mb-3">
-                <label for="" class="form-label">Numéro de carte:</label>
-                <input type="text" class="form-control" name="NumCB" id="numeroCB" aria-describedby="helpId"
-                    placeholder="XXXX XXXX XXXX XXXX" required>
-            </div>
-           
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
-                <label for="" class="form-label">Numéro de carte:</label>
-                <input type="text" class="form-control" name="NumVisa" id="numeroCarteVisa" aria-describedby="helpId"
-                    placeholder="XXXX XXXX XXXX XXXX">
-            </div>
-
-            <div class="col-sm-12 col-lg-6 mb-3" hidden>
-                <label for="" class="form-label">Numéro de carte:</label>
-                <input type="text" class="form-control" name="NumMC" id="numeroMasterCard" aria-describedby="helpId"
-                    placeholder="XXXX XXXX XXXX XXXX">
-            </div>
 
             <div class="col-sm-12 col-lg-6 mb-3" hidden>
                 <label for="" class="form-label">Numéro de carte:</label>
@@ -170,14 +170,15 @@
                                 <option>11</option>
                                 <option>12</option>
                             </select>
-                           
+
                         </div>
                         <div class="d-flex align-items-center ms-sm-auto ms-md-3 justify-content-end" id="">
                             <label for="" class="form-label pe-3">Année:</label>
+
                             <input type="text" class="form-control w-50" name="anneeExpCarte" id="annee" aria-describedby="helpId"
                                 placeholder="AAAA" required>
-                                
-                            </div>
+                                <div class="msg_cbDate"></div>
+
                         </div>
                         <div class="msg_cbDate"></div>
                     </div>
@@ -187,19 +188,32 @@
 
             <div class="col-sm-12 col-lg-6 mb-3">
                 <label for="" class="form-label">Cryptogramme:</label>
-
-                <input type="text" class="form-control" name="Crypto" id="" aria-describedby="helpId" placeholder="XXX" required>
+                <input type="text" class="form-control" name="Crypto" id="" aria-describedby="helpId" placeholder="XXX"
+                    required>
                 <small id="helpId" class="form-text text-muted">Le cryptogramme de sécurité se trouve au verso de la
                     carte de paiement</small>
             </div>
-        <div class="col-sm-6 col-lg-3 offset-lg-3 mb-2 d-flex align-items-center align-self-center">
-            <button type="submit" class="btn btn-primary ms-lg-auto" id="submit">Valider la réservation</button>
+            <div class="col-sm-6 col-lg-3 offset-lg-3 mb-2 d-flex align-items-center align-self-center">
+                <button type="submit" class="btn btn-primary ms-lg-auto" id="submit">Valider la réservation</button>
+            </div>
         </div>
         </div>
-    </div>
-
     </form>
 
+
+
+    
+
+    
+
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
 
         <footer class="text-center text-white" style="background-color: #555555">
             <!-- Grid container -->
@@ -350,21 +364,8 @@
                 </div>
                 <!-- Copyright -->
         </footer>
-        
-        
-        
-      <!--Scripts!!-->
-    <script src="./js/validation_cb_et_cp.js"></script>
-    <script src="./js/resa.js"></script>
-    
-        <!-- Bootstrap JavaScript Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
-        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
-        crossorigin="anonymous"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
-        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
-        crossorigin="anonymous"></script>
+        <script src="./js/validation_cb_et_cp.js"></script>
+        <script src="./js/resa.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@easepick/datetime@1.2.0/dist/index.umd.min.js"></script>
@@ -373,7 +374,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@easepick/range-plugin@1.2.0/dist/index.umd.min.js"></script>
 
     
-
 
 </body>
 
