@@ -95,7 +95,6 @@ choixModele.onchange = function () {
     }
 
 
-};
 
 //Calendriers, dates, etc
 
