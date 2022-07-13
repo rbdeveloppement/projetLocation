@@ -32,12 +32,12 @@ let bookedDatesV2 = [];
 let bookedDates = bookedDatesV1;   //Bonne nouvelle, j'ai résolu ce bug
 
 for (let i = 0; i < localStorageData.length; i++) {
-    if (localStorageData[i][0] == `maisonChoisie${numeroReservation - 1}` && localStorageData[i][1] == 1) {
+    if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 1) {
         let datesAsStrings = localStorageData[i + 1][1];
         let datesArray = datesAsStrings.split(" au ");
         bookedDatesV1Strings.push(datesArray);
     }
-    else if (localStorageData[i][0] == `maisonChoisie${numeroReservation - 1}` && localStorageData[i][1] == 2) {
+    else if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 2) {
         let datesAsStrings = localStorageData[i + 1][1];
         let datesArray = datesAsStrings[1].split(" au ");
         bookedDatesV2Strings.push(datesArray);
