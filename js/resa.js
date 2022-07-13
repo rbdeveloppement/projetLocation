@@ -19,14 +19,15 @@ choixModele.onchange = function(){
 
 //Evènement lorsque formulaire valide
 
-let formulaire = document.querySelector("#form");
-formulaire.onsubmit = function(e){
-    e.preventDefault();
-  if (telIsOk && cpIsOk && mailIsOk && visaIsOk && masterIsOk && AmExpisOk == true){
+// let formulaire = document.querySelector("#form");
+// formulaire.onsubmit = function(e){
+//     e.preventDefault();}
+
+function testValidation(){
+  if (telIsOk && cpIsOk && mailIsOk && visaIsOk && masterIsOk && AmExpisOk && dateCB == true){
     alert("formulaire valide");
     // window.open("validation.html");
-  }
-};
+  }}
 
 
 //Calendriers, dates, etc
