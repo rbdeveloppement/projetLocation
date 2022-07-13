@@ -1,8 +1,6 @@
 
 //verification date de validité de la CB
 
-let dateCB = false;
-
 document.querySelector(".btn").onclick = (evt) => {
     evt.preventDefault();
 let moisValide = document.querySelector("#moisExpCarte").value;
