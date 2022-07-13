@@ -31,6 +31,10 @@ let bookedDatesV1 = []
 let bookedDatesV2 = [];
 let bookedDates = bookedDatesV1;   //Bonne nouvelle, j'ai résolu ce bug
 
+localStorageData = localStorageData[0]
+
+
+if(localStorageData.length > 0){
 for (let i = 0; i < localStorageData.length; i++) {
     if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 1) {
         let datesAsStrings = localStorageData[i + 1][1];
@@ -45,7 +49,7 @@ for (let i = 0; i < localStorageData.length; i++) {
     else {
         continue;
     }
-}
+}}
 
 bookedDatesV1.map(d => {
     if (d instanceof Array){
@@ -128,9 +132,11 @@ const pickerVilla = new easepick.create({
 
 
 //Evènement lorsque formulaire valide
-let formulaire = document.querySelector("#form");
-formulaire.onsubmit = (event) => {
-    event.preventDefault();
+// let formulaire = document.querySelector("#form");
+// formulaire.onsubmit = (event) => {
+//     event.preventDefault();}
+
+function Validationformulaire(){
     alert("formulaire valide");
     window.open("validation.html");
     //Sauvegarde des données
@@ -146,10 +152,10 @@ formulaire.onsubmit = (event) => {
     localStorage.setItem(`datesDeResas${numeroReservation}`, datesDeResas);
     numeroReservation++;
     localStorage.setItem("numeroReservation", JSON.stringify(numeroReservation));
+    let bp = true;
 
 };
 
 
 
 
-let bp = true;
