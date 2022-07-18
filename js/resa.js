@@ -1,5 +1,4 @@
 
-const DateTime = easepick.DateTime;
 
 
 //Récupération des données de la session précédente
