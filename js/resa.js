@@ -1,5 +1,5 @@
 
-
+const DateTime = easepick.DateTime;
 
 //Récupération des données de la session précédente
 
@@ -37,12 +37,12 @@ for (let i = 0; i < localStorageData.length; i++) {
     if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 1) {
         let datesAsStrings = localStorageData[i + 1][1];
         let datesArray = datesAsStrings.split(" au ");
-        bookedDatesV1Strings.push(datesArray);
+        bookedDatesV1.push(datesArray);
     }
     else if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 2) {
         let datesAsStrings = localStorageData[i + 1][1];
         let datesArray = datesAsStrings[1].split(" au ");
-        bookedDatesV2Strings.push(datesArray);
+        bookedDatesV2S.push(datesArray);
     }
     else {
         continue;
