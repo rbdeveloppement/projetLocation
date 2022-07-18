@@ -1,7 +1,5 @@
-const DateTime = easepick.DateTime;
 
-let HTMLinputfields = document.querySelectorAll("input");
-let HTMLselects = document.querySelectorAll("select");
+
 
 //Récupération des données de la session précédente
 
@@ -157,4 +155,27 @@ function Validationformulaire(){
 
 
 
+//Evènement lorsque formulaire valide
+// let formulaire = document.querySelector("#form");
+// formulaire.onsubmit = (event) => {
+//     event.preventDefault();}
 
+// function Validationformulaire(){
+//     alert("formulaire valide");
+//     window.open("validation.html");
+//     //Sauvegarde des données
+//     let nom = document.querySelector("#nom").value;
+//     localStorage.setItem(`nom${numeroReservation}`, nom);
+//     let prenom = document.querySelector("#prenom").value;
+//     localStorage.setItem(`prenom${numeroReservation}`, prenom);
+//     let telephone = document.querySelector("#tel").value;
+//     localStorage.setItem(`telephone${numeroReservation}`, telephone);
+//     let maisonChoisie = document.querySelector("#choixVilla").value;
+//     localStorage.setItem(`maisonChoisie${numeroReservation}`, maisonChoisie);
+//     let datesDeResas = document.querySelector("#dateArrivee").value;
+//     localStorage.setItem(`datesDeResas${numeroReservation}`, datesDeResas);
+//     numeroReservation++;
+//     localStorage.setItem("numeroReservation", JSON.stringify(numeroReservation));
+//     let bp = true;
+
+// };
