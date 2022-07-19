@@ -25,49 +25,6 @@ localStorageData.push(Object.entries(localStorage));
 
 //Recupérer et ajouter les dates dans les tableaux de réservation
 
-let bookedDatesV1 = []
-let bookedDatesV2 = [];
-let bookedDates = bookedDatesV1;   //Bonne nouvelle, j'ai résolu ce bug
-
-localStorageData = localStorageData[0]
-
-
-if(localStorageData.length > 0){
-for (let i = 0; i < localStorageData.length; i++) {
-    if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 1) {
-        let datesAsStrings = localStorageData[i + 1][1];
-        let datesArray = datesAsStrings.split(" au ");
-        bookedDatesV1.push(datesArray);
-    }
-    else if (localStorageData[i][0].startsWith('maisonChoisie') && localStorageData[i][1] == 2) {
-        let datesAsStrings = localStorageData[i + 1][1];
-        let datesArray = datesAsStrings[1].split(" au ");
-        bookedDatesV2S.push(datesArray);
-    }
-    else {
-        continue;
-    }
-}}
-
-bookedDatesV1.map(d => {
-    if (d instanceof Array){
-        const start = new DateTime(d[0], 'DD-MM-YYYY');
-        const end = new DateTime(d[1], 'DD-MM-YYYY');
-        return [start, end];
-    }
-    return new DateTime(d, "DD-MM-YYYY");
-
-} );
-
-bookedDatesV2.map(d => {
-    if (d instanceof Array){
-        const start = new DateTime(d[0], 'DD-MM-YYYY');
-        const end = new DateTime(d[1], 'DD-MM-YYYY');
-        return [start, end];
-    }
-    return new DateTime(d, "DD-MM-YYYY");
-
-} );
 
 
 let choixVilla = document.getElementById("choixVilla");
@@ -80,6 +37,37 @@ choixVilla.onchange = () => {
     }
 }
 
+//Calendriers, dates, etc
+
+let datMinV1 = new Date(), datMinV2 = datMinV1;
+let datMaxV1 = new Date("2022-08-27"), datMaxV2 = datMaxV1;
+
+
+//calendriers = modifier les variables associées aux clés AVANT l'exécution de ce code!
+const pickerVilla = new easepick.create({
+    element: document.getElementById('dateArrivee'),
+    css: [
+        'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css',
+    ],
+    lang: 'fr-FR',
+    format: 'DD/MM/YYYY',
+    plugins: ['LockPlugin', 'RangePlugin'],
+    LockPlugin: {
+        filter(date, picked) {
+        return bookedDates.includes(date.format('DD/MM/YYYY'));
+      },
+    minDate: datMinV1, 
+    maxDate: datMaxV1, 
+    inseparable: true, 
+    minDays: 7, 
+    maxDays: 28
+    },
+    RangePlugin: { delimiter: " au ", }
+});
+
+//REGEX, VALIDATION FORMULAIRE, ETC
+
+
 //Active le champ CB lorsqu'une valeur de carte est choisie:
 let CBfield = document.getElementById("numeroCB");
 let choixModele = document.getElementById("carteBancaire")
@@ -91,41 +79,6 @@ choixModele.onchange = function () {
     else {
         CBfield.disabled = true;
     }}
-
-
-
-//Calendriers, dates, etc
-
-let datMinV1 = new Date("2022-07-16"), datMinV2 = datMinV1;
-let datMaxV1 = new Date("2022-08-27"), datMaxV2 = datMaxV1;
-
-
-//calendriers = modifier les variables associées aux clés AVANT l'exécution de ce code!
-const pickerVilla = new easepick.create({
-    element: document.getElementById('dateArrivee'),
-    css: [
-        'https://cdn.jsdelivr.net/npm/@easepick/bundle@1.2.0/dist/index.css',
-    ],
-    lang: 'fr-FR',
-    format: 'DD-MM-YYYY',
-    plugins: ['LockPlugin', 'RangePlugin'],
-    LockPlugin: {
-        filter(date, picked){
-            if (picked.length === 1) {
-                const incl = date.isBefore(picked[0]) ? "[)" : "(]";
-                return (
-                  !picked[0].isSame(date, "day") && date.inArray(bookedDates, incl));
-              }
-              return date.inArray(bookedDates, "[)");
-        },
-    minDate: datMinV1, maxDate: datMaxV1, inseparable: true, minDays: 7, maxDays: 28,
-    },
-    RangePlugin: { delimiter: " au ", }
-});
-
-//a insérer dans LockPlugin
-// filter(date, picked){return !listeSamedisV1.includes(date.format('DD-MM-YYYY'));} 
-
 
 
 //Evènement lorsque formulaire valide
