@@ -25,7 +25,11 @@ localStorageData.push(Object.entries(localStorage));
 
 //Recupérer et ajouter les dates dans les tableaux de réservation
 
+let bookedDatesV1 = []
+let bookedDatesV2 = [];
+let bookedDates = bookedDatesV1;   //Bonne nouvelle, j'ai résolu ce bug
 
+localStorageData = localStorageData[0]
 
 let choixVilla = document.getElementById("choixVilla");
 choixVilla.onchange = () => {
